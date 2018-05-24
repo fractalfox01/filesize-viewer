@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File-size</title>
+</head>
+<link type="text/css" rel="stylesheet" href="./styles/index.css"/>
+
+<body>
+<div id="wrapper">
+    <div class="header">A File Size Viewer</div>
+    <div class="mainContainer">
+        <h1>Basic Usage</h1>
+        <form id="imgForm" method="post" action="submit" enctype="multipart/form-data">
+            File:<input id="fileinput" type="file" name="file"/>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<script>
+  document.getElementById('fileinput').addEventListener('change', function(){
+	  var file = this.files[0];
+	  // This code is only for demo ...
+	  console.log("size : " + file.size);
+	}, false);
+</script>
+</body>
+</html>
